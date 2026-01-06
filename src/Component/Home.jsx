@@ -52,7 +52,7 @@ export default function Home() {
     {
       quote: "Poeage Nexus delivered exceptional results under tight deadlines. Their workforce quality exceeded our expectations.",
       author: "Plant Manager",
-      company: "TATA Motors",
+      company: "TATA Motors.",
       rating: 5
     },
     {
