@@ -1,0 +1,929 @@
+════════════════════════════════════════════════════════════════════════════════
+                    POEAGE NEXUS - WEBSITE IMPROVEMENT SPECIFICATION
+════════════════════════════════════════════════════════════════════════════════
+
+Document Version    : 1.0
+Date               : January 2, 2026
+Project            : Poeage Nexus Website Enhancement
+Prepared For       : Development Team
+Status             : Ready for Implementation
+
+════════════════════════════════════════════════════════════════════════════════
+                              TABLE OF CONTENTS
+════════════════════════════════════════════════════════════════════════════════
+
+    PART 1  :  New Pages Required
+    PART 2  :  UI/UX Improvements
+    PART 3  :  Style & Design Updates
+    PART 4  :  Technical Improvements
+    PART 5  :  Mobile Responsiveness
+    PART 6  :  Integrations Required
+    PART 7  :  Content Requirements
+    PART 8  :  Implementation Priority
+    PART 9  :  Testing Checklist
+
+════════════════════════════════════════════════════════════════════════════════
+                        PART 1: NEW PAGES REQUIRED
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.1  HOW IT WORKS PAGE                                                      │
+│  Route: /work                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Explain the hiring/staffing process to potential clients
+
+SECTIONS TO INCLUDE:
+
+    Section               Content Description
+    ─────────────────────────────────────────────────────────────────────────
+    Hero Banner           "How We Work" with subtitle about seamless hiring
+    Step 1                Share Requirements - Client submits workforce needs
+    Step 2                We Source Talent - Database search & screening
+    Step 3                Interview & Select - Client interviews candidates
+    Step 4                Deployment - Workers onboarded and deployed
+    Step 5                Ongoing Support - Continuous HR support
+    CTA Section           "Ready to Hire?" button leading to Contact
+    FAQ Accordion         Common questions about the process
+
+Design Notes:
+    - Use vertical timeline with icons
+    - Animated step cards on scroll
+    - Include estimated timeframes for each step
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.2  HIRE/REQUEST WORKERS PAGE                                              │
+│  Route: /hire                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Dedicated form for businesses to request manpower
+
+FORM FIELDS REQUIRED:
+
+    Field Name                    Type              Required
+    ─────────────────────────────────────────────────────────────────────────
+    Company Name                  Text Input        Yes
+    Contact Person                Text Input        Yes
+    Email                         Email Input       Yes
+    Phone                         Tel Input         Yes
+    Industry Type                 Dropdown          Yes
+        Options: Manufacturing, IT, Construction, Retail, Healthcare, Others
+    Number of Workers Required    Number Input      Yes
+    Worker Type                   Dropdown          Yes
+        Options: Skilled, Semi-skilled, Unskilled
+    Job Roles Needed              Multi-select      Yes
+    Location of Deployment        Text Input        Yes
+    Duration                      Radio Buttons     Yes
+        Options: Temporary, Permanent, Contract
+    Start Date Required           Date Picker       No
+    Salary Range Budget           Text Input        No
+    Additional Requirements       Textarea          No
+    File Upload                   File Input        No
+        Accept: PDF, DOC, DOCX (Job description)
+
+Additional Features:
+    - Real-time form validation
+    - Success confirmation with reference number
+    - Auto-email to client with submission details
+    - Admin notification email
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.3  SERVICES PAGE - FULL REDESIGN                                          │
+│  Route: /services                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Showcase all service offerings
+
+SERVICE CATEGORIES TO DISPLAY:
+
+    Service                   Description                              Icon
+    ─────────────────────────────────────────────────────────────────────────
+    Manpower Supply           Skilled & unskilled workforce            Workers
+    Contract Staffing         Temporary workforce on contract          Clipboard
+    Permanent Recruitment     Full-time hiring solutions               Target
+    HR Outsourcing            Complete HR management services          Building
+    Payroll Management        Salary processing & compliance           Money
+    Training & Development    Worker skill enhancement programs        Book
+    Background Verification   Employee verification services           Checkmark
+    Compliance Management     Labour law & statutory compliance        Scale
+
+PAGE STRUCTURE:
+    1. Hero with animated service icons
+    2. Service cards grid (3x3 or 4x2 layout)
+    3. Each card expands to show details on click
+    4. Industry-specific solutions section
+    5. "Why Choose Us" comparison table
+    6. CTA: Request a Quote button
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.4  PROJECTS/PORTFOLIO PAGE - FULL REDESIGN                                │
+│  Route: /projects                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Showcase successful placements and case studies
+
+STATISTICS TO DISPLAY:
+
+    Metric                    Value
+    ─────────────────────────────────────────────────────────────────────────
+    Total Workers Deployed    20,000+
+    Industries Served         15+
+    Cities Covered            25+
+    Client Retention Rate     95%
+
+CASE STUDIES (Minimum 3-5 required):
+
+    Client          Industry        Challenge                Solution
+    ─────────────────────────────────────────────────────────────────────────
+    TATA Motors     Automotive      500 workers in 2 weeks   Rapid deployment
+    MRF Tyres       Manufacturing   Skilled technicians      Training + placement
+    Construction    Real Estate     Seasonal workforce       Flexible contracts
+
+Design Elements:
+    - Before/After statistics
+    - Client video testimonials (embedded)
+    - Project timeline visualization
+    - Filterable by industry
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.5  404 ERROR PAGE                                                         │
+│  Route: Any unknown route                                                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Handle unknown routes gracefully
+
+Content Required:
+    - "Page Not Found" message
+    - Animated illustration
+    - Search bar
+    - Quick links to main pages
+    - "Go Home" button
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.6  PRIVACY POLICY PAGE                                                    │
+│  Route: /privacy                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Legal requirement for data collection
+
+Sections Required:
+    - Information We Collect
+    - How We Use Information
+    - Data Storage & Security
+    - Cookie Policy
+    - Third-Party Services
+    - User Rights
+    - Contact for Privacy Concerns
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  1.7  TERMS & CONDITIONS PAGE                                                │
+│  Route: /terms                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purpose: Legal terms for website usage and services
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                        PART 2: UI/UX IMPROVEMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.1  HEADER/NAVIGATION IMPROVEMENTS                                         │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+CURRENT ISSUES IDENTIFIED:
+
+    Issue                         Location              Status
+    ─────────────────────────────────────────────────────────────────────────
+    Link /work not defined        Header.jsx            BROKEN
+    Link /hire not defined        Header.jsx            BROKEN
+    Link /aboutus (mobile)        Header.jsx            Should be /about
+    Using <a> instead of <Link>   Header.jsx            Causes page reload
+    No active state indicator     Header.jsx            Missing feature
+
+REQUIRED NAVIGATION STRUCTURE:
+
+    Desktop Navigation:
+    ├── Logo (links to /)
+    ├── About Us ──────────────────────────────────► /about
+    ├── Services (Dropdown)
+    │   ├── Manpower Supply
+    │   ├── Contract Staffing
+    │   ├── HR Outsourcing
+    │   └── All Services ──────────────────────────► /services
+    ├── How It Works ──────────────────────────────► /work
+    ├── Jobs ──────────────────────────────────────► /jobs
+    ├── Clients ───────────────────────────────────► /clients
+    └── Contact Us (Button) ───────────────────────► /contact
+
+    Optional Addition: Phone Number Display in Header
+
+STYLE UPDATES REQUIRED:
+    - Add sticky header with shadow on scroll
+    - Active page indicator (underline or highlight)
+    - Mega menu for Services dropdown
+    - Add company phone number in header
+    - Language selector (if multi-language planned)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.2  FOOTER IMPROVEMENTS                                                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+CURRENT FOOTER SECTIONS:
+    - Brand + Social
+    - Quick Links
+    - Our Workforce
+    - Contact Info
+
+ADDITIONAL SECTIONS NEEDED:
+
+    Section                       Content
+    ─────────────────────────────────────────────────────────────────────────
+    Certifications/Badges         ISO Certified, MSME Registered, Startup India
+    Legal Links                   Privacy Policy, Terms & Conditions, Refund
+    Newsletter Subscription       Email input + Subscribe button
+    Office Locations              Multiple locations if applicable
+    WhatsApp Quick Contact        Floating chat button
+
+STYLE UPDATES:
+    - Add Google Maps embed or link
+    - Add business hours
+    - Trust badges/certifications
+    - App download links (if mobile app exists)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.3  HOME PAGE ENHANCEMENTS                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Current State: Basic hero section only
+
+SECTIONS TO ADD (in order):
+
+    Order   Section              Description
+    ─────────────────────────────────────────────────────────────────────────
+    1       Hero                 EXISTS - Add video background option
+    2       Statistics Bar       "20K+ Workers | 30+ Clients | 2+ Years"
+    3       Services Overview    4-6 service cards with icons
+    4       How It Works         4-step process visualization
+    5       Industries Served    Grid of industry icons/logos
+    6       Client Logos         Scrolling logo carousel
+    7       Testimonials         Client review slider
+    8       Why Choose Us        4 USP cards with icons
+    9       CTA Banner           "Ready to Scale Your Workforce?"
+    10      Latest Jobs          3-4 featured job cards
+    11      Blog/News Preview    Latest 3 articles (if blog added)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.4  ABOUT PAGE ENHANCEMENTS                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+SECTIONS TO ADD:
+    - Mission & Vision statements
+    - Core Values (4-6 values with icons)
+    - Team Section (key team members with photos)
+    - Company Registration details
+    - Awards & Recognition
+    - Office photos/gallery
+    - Company video introduction
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.5  CONTACT PAGE ENHANCEMENTS                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+CURRENT ISSUES:
+    - Form doesn't submit (no functionality)
+    - No map
+    - Single location only
+
+REQUIRED UPDATES:
+    - Working form with EmailJS/backend
+    - Google Maps embed
+    - Multiple contact methods:
+        • Phone (clickable tel: link)
+        • WhatsApp (direct chat link)
+        • Email (clickable mailto: link)
+    - Office hours display
+    - Response time expectation
+    - Social media links
+    - FAQ section
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.6  JOBS PAGE ENHANCEMENTS                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Current State: Good functionality exists
+
+IMPROVEMENTS NEEDED:
+    - Add job location field
+    - Add salary range display
+    - Add experience required field
+    - Add job posting date
+    - Add "Share Job" social buttons
+    - Add job alerts subscription
+    - Add resume builder/tips section
+    - Pagination for job listings
+    - "Save Job" functionality (using localStorage)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  2.7  CLIENTS PAGE ENHANCEMENTS                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+IMPROVEMENTS NEEDED:
+    - Add more client logos (aim for 10-15)
+    - Add client testimonials/quotes
+    - Add industry filter
+    - Add "Become a Client" CTA
+    - Case study links for each client
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                      PART 3: STYLE & DESIGN UPDATES
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  3.1  COLOR SCHEME STANDARDIZATION                                           │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+CURRENT ISSUE: Inconsistent color usage across components
+    - Blues: blue-600, blue-700, cyan-500, cyan-600
+    - Purples: purple-600, fuchsia-600 (inconsistent)
+
+RECOMMENDED BRAND PALETTE:
+
+    PRIMARY COLORS:
+    ─────────────────────────────────────────────────────────────────────────
+    Primary Blue          #2563EB         Tailwind: blue-600
+    Primary Cyan          #06B6D4         Tailwind: cyan-500
+    Gradient              linear-gradient(to right, #2563EB, #06B6D4)
+
+    SECONDARY COLORS:
+    ─────────────────────────────────────────────────────────────────────────
+    Dark Blue             #1E40AF         Tailwind: blue-800
+    Light Cyan            #CFFAFE         Tailwind: cyan-100
+
+    NEUTRAL COLORS:
+    ─────────────────────────────────────────────────────────────────────────
+    Text Primary          #111827         Tailwind: gray-900
+    Text Secondary        #4B5563         Tailwind: gray-600
+    Background            #F9FAFB         Tailwind: gray-50
+
+    ACCENT COLORS:
+    ─────────────────────────────────────────────────────────────────────────
+    Success               #10B981         Tailwind: green-500
+    Warning               #F59E0B         Tailwind: amber-500
+    Error                 #EF4444         Tailwind: red-500
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  3.2  TYPOGRAPHY STANDARDIZATION                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+RECOMMENDED FONT STACK:
+
+    Usage                 Font Options
+    ─────────────────────────────────────────────────────────────────────────
+    Headings              'Inter', 'Poppins', or 'Plus Jakarta Sans'
+    Body                  'Inter' or 'Open Sans'
+    Accent/Logo           Current cursive font (keep as is)
+
+FONT SIZES:
+
+    Element               Desktop         Mobile
+    ─────────────────────────────────────────────────────────────────────────
+    H1                    48px            32px
+    H2                    36px            28px
+    H3                    24px            20px
+    Body                  16px            16px
+    Small                 14px            14px
+    Caption               12px            12px
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  3.3  COMPONENT STYLE GUIDE                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+BUTTONS:
+
+    Primary Button:
+        Background        Gradient blue-cyan
+        Text              White
+        Padding           12px 24px
+        Border-radius     8px (rounded-lg)
+        Hover             scale(1.05) + shadow increase
+
+    Secondary Button:
+        Background        White
+        Border            1px solid gray-300
+        Text              gray-700
+        Hover             gray-100 background
+
+    Ghost Button:
+        Background        Transparent
+        Text              blue-600
+        Hover             blue-50 background
+
+CARDS:
+
+    Standard Card:
+        Background        White
+        Border            1px solid gray-200
+        Border-radius     16px (rounded-2xl)
+        Shadow            shadow-md
+        Hover             shadow-xl + translateY(-4px)
+        Padding           24px
+
+FORM INPUTS:
+
+    Default State:
+        Border            1px solid gray-300
+        Border-radius     12px
+        Padding           12px 16px
+
+    Focus State:
+        Ring              2px cyan-500
+
+    Error State:
+        Border            1px solid red-500
+        Helper Text       Red error message below input
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  3.4  ANIMATION STANDARDS                                                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+PAGE TRANSITIONS:
+    - Fade in: 0.3s ease
+    - Slide up: translateY(20px) to translateY(0)
+
+HOVER EFFECTS:
+    - Cards: scale(1.02) + shadow increase
+    - Buttons: scale(1.05)
+    - Links: underline animation (left-to-right)
+
+SCROLL ANIMATIONS:
+    - Use Framer Motion's whileInView
+    - Stagger children by 0.1s delay
+    - Trigger at 20% viewport intersection
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  3.5  DARK MODE IMPLEMENTATION                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+REQUIREMENTS:
+    - Toggle switch in header
+    - Store preference in localStorage
+    - System preference detection
+    - All components need dark variants
+
+DARK MODE COLORS:
+
+    Variable              Color Code      Tailwind Class
+    ─────────────────────────────────────────────────────────────────────────
+    Dark Background       #0F172A         slate-900
+    Dark Card             #1E293B         slate-800
+    Dark Border           #334155         slate-700
+    Dark Text             #F1F5F9         slate-100
+    Dark Text Secondary   #94A3B8         slate-400
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                      PART 4: TECHNICAL IMPROVEMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  4.1  CODE QUALITY FIXES                                                     │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+ISSUES AND FIXES:
+
+    File              Issue                           Fix Required
+    ─────────────────────────────────────────────────────────────────────────
+    Header.jsx        Using <a> tags for nav          Change to React Router <Link>
+    Footer.jsx        Using <a> tags for nav          Change to React Router <Link>
+    Header.jsx        Routes /work, /hire broken      Update to correct routes
+    Header.jsx        Mobile uses /aboutus            Change to /about
+    index.html        <link> outside <html> tag       Move inside <head>
+    Jobs.jsx          API keys exposed in code        Move to .env file
+    Jobs.jsx          Unused currentTime variable     Remove or utilize
+    Contact.jsx       Form has no submit handler      Add EmailJS integration
+    Clintes.jsx       Filename has typo               Rename to Clients.jsx
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  4.2  ENVIRONMENT VARIABLES SETUP                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+CREATE .env FILE IN PROJECT ROOT:
+
+    REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+    REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+    REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+    REACT_APP_GOOGLE_MAPS_API_KEY=your_maps_key
+    REACT_APP_SITE_URL=https://poeagenexus.com
+
+NOTE: Add .env to .gitignore to prevent committing sensitive data
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  4.3  SEO IMPROVEMENTS                                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+PER-PAGE SEO WITH REACT HELMET:
+
+    Each page should include:
+        - Unique title tag
+        - Meta description
+        - Open Graph tags (og:title, og:description, og:image)
+        - Canonical URL
+        - Twitter card tags
+
+STRUCTURED DATA (JSON-LD):
+
+    Add to Home page - Organization Schema:
+        - Organization name
+        - URL
+        - Logo
+        - Contact point
+        - Social media links
+
+    Add to Jobs page - JobPosting Schema:
+        - Job title
+        - Description
+        - Company
+        - Location
+        - Salary (if applicable)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  4.4  PERFORMANCE OPTIMIZATIONS                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Optimization              Implementation
+    ─────────────────────────────────────────────────────────────────────────
+    Code Splitting            Use React.lazy() for route components
+    Image Optimization        Use WebP format, implement lazy loading
+    Bundle Analysis           Add webpack-bundle-analyzer
+    Caching                   Add service worker for offline support
+    Compression               Enable Gzip/Brotli on server
+    CDN                       Use CDN for static assets
+
+LAZY LOADING EXAMPLE:
+
+    const About = React.lazy(() => import('./Component/About'));
+    const Jobs = React.lazy(() => import('./Component/Jobs'));
+
+    Wrap routes with:
+    <Suspense fallback={<LoadingSpinner />}>
+        <Routes>...</Routes>
+    </Suspense>
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  4.5  ACCESSIBILITY (A11Y) REQUIREMENTS                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Element               Requirement
+    ─────────────────────────────────────────────────────────────────────────
+    Images                All images need descriptive alt text
+    Buttons               Add aria-label for icon-only buttons
+    Forms                 Labels linked to inputs with htmlFor
+    Colors                Minimum 4.5:1 contrast ratio
+    Keyboard              All interactive elements keyboard accessible
+    Focus                 Visible focus indicators
+    Skip Link             "Skip to main content" for screen readers
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                      PART 5: MOBILE RESPONSIVENESS
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  5.1  BREAKPOINTS                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Breakpoint            Size Range          Tailwind Prefix
+    ─────────────────────────────────────────────────────────────────────────
+    Mobile                < 640px             default (no prefix)
+    Tablet                640px - 1024px      sm: and md:
+    Desktop               > 1024px            lg:
+    Large Desktop         > 1280px            xl:
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  5.2  MOBILE-SPECIFIC REQUIREMENTS                                           │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Component             Mobile Behavior
+    ─────────────────────────────────────────────────────────────────────────
+    Header                Hamburger menu, sticky positioning
+    Hero                  Stack vertically, smaller text sizes
+    Cards                 Single column layout on mobile
+    Forms                 Full width inputs
+    Tables                Horizontal scroll or convert to card view
+    Footer                Accordion sections for link groups
+    Images                Responsive sizing with lazy loading
+    Modals                Full screen on mobile devices
+    Navigation            Consider bottom nav bar option
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  5.3  TOUCH INTERACTIONS                                                     │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    - Minimum touch target size: 44x44 pixels
+    - Implement swipe gestures for carousels
+    - Add pull-to-refresh if PWA
+    - Avoid hover-dependent interactions on mobile
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                      PART 6: INTEGRATIONS REQUIRED
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  6.1  EMAIL INTEGRATION                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+FORMS REQUIRING EMAIL:
+
+    Form                  Send To                       Priority
+    ─────────────────────────────────────────────────────────────────────────
+    Contact Form          contact@poeagenexus.com       HIGH
+    Job Application       hr@poeagenexus.com            HIGH
+    Hire Request Form     sales@poeagenexus.com         HIGH
+    Newsletter Signup     Add to mailing list           MEDIUM
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  6.2  ANALYTICS INTEGRATION                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Service                   Purpose
+    ─────────────────────────────────────────────────────────────────────────
+    Google Analytics 4        Website traffic and user behavior
+    Google Tag Manager        Tag management and event tracking
+    Microsoft Clarity         Heatmaps and session recordings
+    Facebook Pixel            Ad tracking (if running Facebook ads)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  6.3  THIRD-PARTY SERVICES                                                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Service                   Purpose
+    ─────────────────────────────────────────────────────────────────────────
+    Google Maps               Office location on Contact page
+    WhatsApp Business API     Quick chat floating button
+    Calendly                  Meeting scheduling embed
+    Freshdesk/Zendesk         Support ticket system (optional)
+    Mailchimp/Sendinblue      Newsletter management
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  6.4  SOCIAL MEDIA LINKS                                                     │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+REQUIRED PROFILES:
+
+    Platform              Purpose
+    ─────────────────────────────────────────────────────────────────────────
+    LinkedIn              Company page, B2B networking
+    Facebook              Business page, community engagement
+    Instagram             Brand awareness, culture showcase
+    Twitter/X             Company updates, industry news
+    YouTube               Company videos, testimonials, tutorials
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                      PART 7: CONTENT REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  7.1  COPY/TEXT NEEDED                                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Page                  Content Required
+    ─────────────────────────────────────────────────────────────────────────
+    Home                  Hero tagline, service descriptions, USPs
+    About                 Company story, mission, vision, values
+    Services              Detailed service descriptions (200-300 words each)
+    How It Works          Process step descriptions
+    Clients               Client testimonial quotes
+    Jobs                  Updated job descriptions with details
+    FAQ                   15-20 frequently asked questions with answers
+    Privacy/Terms         Legal content (consult legal team)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  7.2  IMAGES/MEDIA REQUIRED                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Asset                     Specifications
+    ─────────────────────────────────────────────────────────────────────────
+    Hero Image/Video          1920x1080px, optimized WebP format
+    Service Icons             SVG format, consistent style across all
+    Team Photos               400x400px, professional headshots
+    Client Logos              PNG with transparency, consistent sizing
+    Office Photos             High quality, 1200x800px minimum
+    Testimonial Photos        100x100px circular crop
+    Blog Featured Images      800x450px (16:9 aspect ratio)
+    Favicon                   32x32px and 180x180px (Apple touch)
+    OG Image                  1200x630px for social media sharing
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  7.3  VIDEO CONTENT                                                          │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Video                     Purpose                     Duration
+    ─────────────────────────────────────────────────────────────────────────
+    Company Introduction      About page, Home hero       60-90 seconds
+    How It Works              Process explanation         2-3 minutes
+    Client Testimonials       Social proof                30-60 sec each
+    Office Tour               Culture showcase            1-2 minutes
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                    PART 8: IMPLEMENTATION PRIORITY
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  PHASE 1 - CRITICAL (Week 1-2)                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  Fix broken navigation routes in Header.jsx
+    [ ]  Fix HTML structure in index.html (move link tag)
+    [ ]  Move API keys to environment variables (.env)
+    [ ]  Complete Services page with full content
+    [ ]  Complete Projects page with case studies
+    [ ]  Add Contact form functionality (EmailJS)
+    [ ]  Fix filename typo: Clintes.jsx to Clients.jsx
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  PHASE 2 - IMPORTANT (Week 3-4)                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  Create How It Works page (/work)
+    [ ]  Create Hire Request page (/hire)
+    [ ]  Add Home page sections (statistics, services, testimonials)
+    [ ]  Replace all <a> tags with React Router <Link>
+    [ ]  Add 404 error page
+    [ ]  Implement React Helmet for page-specific SEO
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  PHASE 3 - ENHANCEMENT (Week 5-6)                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  Implement Dark Mode toggle
+    [ ]  Improve mobile responsiveness across all pages
+    [ ]  Add loading states and skeleton screens
+    [ ]  Implement lazy loading for images and routes
+    [ ]  Add WhatsApp floating chat button
+    [ ]  Add newsletter subscription functionality
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  PHASE 4 - POLISH (Week 7-8)                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  Add page transition animations
+    [ ]  Performance optimization (code splitting, compression)
+    [ ]  Accessibility audit and fixes
+    [ ]  Cross-browser testing
+    [ ]  Analytics integration (GA4, GTM)
+    [ ]  Create Privacy Policy and Terms pages
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                        PART 9: TESTING CHECKLIST
+════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  FUNCTIONALITY TESTING                                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  All navigation links work correctly
+    [ ]  All forms submit successfully
+    [ ]  Email notifications are received
+    [ ]  Job application flow works end-to-end
+    [ ]  Search and filter functionality on Jobs page
+    [ ]  Mobile menu opens and closes properly
+    [ ]  Modal popups display and close correctly
+    [ ]  Dark mode toggle works (when implemented)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  BROWSER TESTING                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  Google Chrome (latest version)
+    [ ]  Mozilla Firefox (latest version)
+    [ ]  Apple Safari (latest version)
+    [ ]  Microsoft Edge (latest version)
+    [ ]  Mobile Safari (iOS)
+    [ ]  Chrome Mobile (Android)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  PERFORMANCE TARGETS                                                         │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    Metric                        Target
+    ─────────────────────────────────────────────────────────────────────────
+    Lighthouse Performance        Score > 90
+    First Contentful Paint        < 1.5 seconds
+    Time to Interactive           < 3 seconds
+    Core Web Vitals               Pass all metrics
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  DEVICE TESTING                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+    [ ]  iPhone SE (small mobile)
+    [ ]  iPhone 14 Pro (standard mobile)
+    [ ]  iPad (tablet)
+    [ ]  MacBook 13" (small laptop)
+    [ ]  Desktop 1920x1080 (full HD)
+    [ ]  Desktop 2560x1440 (QHD)
+
+
+
+════════════════════════════════════════════════════════════════════════════════
+                              APPENDIX
+════════════════════════════════════════════════════════════════════════════════
+
+CURRENT PROJECT STRUCTURE:
+
+    poeage-nexus/
+    ├── public/
+    │   └── index.html
+    ├── src/
+    │   ├── Asset/
+    │   │   ├── Founder.png
+    │   │   └── NEXUS.png
+    │   ├── Component/
+    │   │   ├── About.jsx
+    │   │   ├── Clintes.jsx      (typo - rename to Clients.jsx)
+    │   │   ├── Contact.jsx
+    │   │   ├── Footer.jsx
+    │   │   ├── Header.jsx
+    │   │   ├── Home.jsx
+    │   │   ├── Jobs.jsx
+    │   │   ├── Projects.jsx     (placeholder - needs content)
+    │   │   └── Services.jsx     (placeholder - needs content)
+    │   ├── App.css
+    │   ├── App.js
+    │   └── index.js
+    ├── package.json
+    ├── postcss.config.js
+    ├── tailwind.config.js
+    └── README.md
+
+
+INCONSISTENT EMAIL ADDRESSES (NEEDS STANDARDIZATION):
+
+    Location              Email Used
+    ─────────────────────────────────────────────────────────────────────────
+    Footer.jsx            manpower@poeagenexus.com
+    Contact.jsx           contact@poeagenexus.com
+    Jobs.jsx              poeagenexus@gmail.com
+
+    Recommendation: Standardize to single domain emails
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            END OF DOCUMENT
+════════════════════════════════════════════════════════════════════════════════
+
+Document Prepared By    : Website Analysis Tool
+Prepared For           : Poeage Nexus Development Team
+Version                : 1.0
+Date                   : January 2, 2026
+
+For questions or clarifications, contact the project manager.
+
+════════════════════════════════════════════════════════════════════════════════
